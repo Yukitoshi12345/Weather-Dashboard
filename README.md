@@ -21,10 +21,10 @@ SO THAT I can plan a trip accordingly
 ```
 
 ## Objectives
-- Search: Enter a city and instantly see current and future conditions.
-- Current Conditions: View city name, date, weather icon, temperature, humidity, and wind speed.
-- Future Conditions: Explore detailed weather info for the next 5 days, including dates, icons, temperature, wind speed, and humidity.
-- Search history: Click a city in the search history to revisit its current and future conditions.
+- **Search**: Enter a city and instantly see current and future conditions.
+- **Current Conditions**: View city name, date, weather icon, temperature, humidity, and wind speed.
+- **Future Conditions**: Explore detailed weather info for the next 5 days, including dates, icons, temperature, wind speed, and humidity.
+- **Search history**: Click a city in the search history to revisit its current and future conditions.
 
 ## Technologies and Tools Used
 - HTML
