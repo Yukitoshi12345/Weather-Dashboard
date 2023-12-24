@@ -1,5 +1,5 @@
 # Weather Dashboard
-
+Plan your day or dream about your next adventure with our weather dashboard, offering instant city searches, detailed current conditions, and a 5-day forecast, all just a click away!
 
 ## User Story
 
@@ -8,6 +8,12 @@ AS A traveler
 I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
 ```
+
+## Objectives
+- Search: Enter a city and instantly see current and future conditions.
+- Current Conditions: View city name, date, weather icon, temperature, humidity, and wind speed.
+- Future Conditions: Explore detailed weather info for the next 5 days, including dates, icons, temperature, wind speed, and humidity.
+- Search history: Click a city in the search history to revisit its current and future conditions.
 
 ## Technologies and Tools Used
 - HTML
