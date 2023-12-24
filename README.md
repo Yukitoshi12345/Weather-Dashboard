@@ -1,2 +1,15 @@
-# Weather-Dashboard
-Challenge 6 of Web Development Bootcamp
+# Weather Dashboard
+
+
+## User Story
+
+```md
+AS A traveler
+I WANT to see the weather outlook for multiple cities
+SO THAT I can plan a trip accordingly
+```
+
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
