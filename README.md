@@ -1,6 +1,17 @@
 # Weather Dashboard
 Plan your day or dream about your next adventure with our weather dashboard, offering instant city searches, detailed current conditions, and a 5-day forecast, all just a click away!
 
+## Table of Contents
+
+- [User Story](#user-story)
+- [Objectives](#objectives)
+- [Technologies And Tools Used](#technologies-and-tools-used)
+- [Screenshot](#screenshot)
+- [Output](#output)
+- [Installation](#installation)
+- [License](#license)
+
+
 ## User Story
 
 ```md
