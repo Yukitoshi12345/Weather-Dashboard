@@ -31,7 +31,7 @@ SO THAT I can plan a trip accordingly
 - CSS
 - JavaScript
 - Bootstrap
-- Moment Js
+- Day.js
 
 ## Screenshot
 
