@@ -25,6 +25,9 @@
     rel="stylesheet"
   />
  
+  <!--------------Adding Reset Stylesheet-------------->
+  <link rel="stylesheet" href="assets/css/reset.css" />
+
   <!--------------Adding Stylesheet-------------->
   <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -35,85 +38,66 @@
 
 <body>
   <header>
-    <h1>Weather Dashboard</h1>
-    <h1 id="currentDay" class="lead" style= "font-size: 35px;"></h1>
+    <div class="navbar">
+      <div class = "col-12 text-center">
+        <h1>Weather Dashboard</h1>
+        <h1 class="lead" style= "font-size: 35px;"></h1>
+      </div>
+    </div>
   </header>
 
-  <form id="search-form" class="form w-100">
-    <input id="search-input" class="form-input w-100" type="text" placeholder="Sydney">
-    <button class="btn btn-info btn-block">
-      <!-- Adding a search bar logo from FontAwesome -->
-      <i class="fas fa-search"></i>
-    </button>
-  </form>
+  <!-- Column containing search field, search button, and search history -->
+  <div class="row">
+    <div class="col-3 bg-light pb-2 pt-3" id="searchResults">
+        <div class="row">
+            <div class="col-12">
+                <h3>Search for a City:</h3>
+            </div>
+        </div>
+    </div>
+  </div>
 
-    <!-- Navbar and title -->
-    <div class="container-fluid">
-      <div class="row navbar navbar-expand-lg navbar-light"
-          style="background: linear-gradient(to right, #52cdec, #1d0cdc);">
-          <div class="col-12 text-center">
-              <h1>About the Weather</h1>
-          </div>
-      </div>
+  
+  <div class="row">
+    <div class="col-12">
+        <div class="input-group">
+            <input class="form-control" type="text" id="enterCity"
+                placeholder="Enter a city"><button type="button" id="searchBtn"
+                class="btn btn-primary">Search</button>
+        </div>
+    </div>
+  </div>
+    
 
-      <!-- Column containing search field, search button, and search history -->
-      <div class="row">
-          <div class="col-3 bg-light pb-2 pt-3" id="searchResults">
-              <div class="row">
-                  <div class="col-12">
-                      <h3>Search for a City:</h3>
-                  </div>
-              </div>
-
-              <div class="row">
-                  <div class="col-12">
-                      <div class="input-group">
-                          <input class="form-control" type="text" id="enterCity"
-                              placeholder="Enter a city"><button type="button" id="searchBtn"
-                              class="btn btn-primary">Search</button>
-                      </div>
-                  </div>
-              </div>
-
-              <!-- Display search history -->
-              <div class="row mt-3">
-                  <div class="col-12">
-
-                      <ul id="searchHistory" class="list-group">
-                          <!-- Append list of searched cities -->
-                      </ul>
-
-                  </div>
-              </div>
-          </div>
-
-          <!-- Display search result for current city and weather condition -->
-          <div id="weatherContent" class="col-9 pb-4 pt-4">
-              <div class="row pb-3 mr-2 ml-2">
-                  <div id="cityDetail" class="col-12 border-dark rounded px-3 py-3">
-                      <!-- Append current city and weather condition -->
-                  </div>
-              </div>
-
-              <!-- Columns for future weather conditions -->
-              <div class="row pb-2 pt-1">
-                  <div class="col-12 ml-2">
-                      <h3>5-Day Forecast:</h3>
-                  </div>
-              </div>
-
-              <div id="fiveDay" class="row pl-2">
-                  <!-- Append 5-day weather forecast -->
-              </div>
-
-          </div>
-      </div>
-
+  <div class="row mt-3">
+    <div class="col-12">
+        <ul id="searchHistory" class="list-group">
+            <!-- Append list of searched cities -->
+        </ul>
+    </div>
   </div>
 
 
+  <!-- Display search result for current city and weather condition -->
+  <div id="weatherContent" class="col-9 pb-4 pt-4">
+    <div class="row pb-3 mr-2 ml-2">
+      <div id="cityDetail" class="col-12 border-dark rounded px-3 py-3">
+          <!-- Append current city and weather condition -->
+      </div>
+    </div>
+  </div>
 
+  <!-- Columns for future weather conditions -->
+  <div class="row pb-2 pt-1">
+    <div class="col-12 ml-2">
+      <h3>5-Day Forecast:</h3>
+    </div>
+  </div>
 
+  <div id="fiveDay" class="row pl-2">
+  <!-- Append 5-day weather forecast -->
+  </div>
+  
   <!--------------Adding jQuery-------------->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
