@@ -2,25 +2,16 @@
  Global rules and element rules
 ==================================== */
 
-
 header {
-    background-color: #001aff;
-}
-
-/* Navbar */
-.navbar {
+    background-color: blue;
     height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
 }
 
 h1 {
-    color: white;
-}
-
-.lead {
-    margin-top: 10px;
-}
-
+    text-align: center; /* Center the text */
+    margin-top: 1.5rem; /*Add margin above */
+    margin-bottom: 1.5rem; /* Add margin below */
+    font-size: 200%;
+    padding: 30px 0;
+  }
+  
