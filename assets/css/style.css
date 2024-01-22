@@ -16,10 +16,17 @@ h1 {
 }
 
 h2 {
+    font-size: 175%;
+    font-weight: bold;
+    color: black;
+}
+
+h3 {
     font-size: 150%;
     font-weight: bold;
     color: black;
 }
+
 
 .btn {
     margin-top: 15px;
