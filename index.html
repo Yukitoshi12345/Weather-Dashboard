@@ -37,12 +37,14 @@
 </head>
 
 <body>
+  <!-- Title and the Navigation Bar -->
   <header class = "container-fluid">
       <div class = "col-12 text-center">
         <h1>Weather Dashboard</h1>
       </div>
   </header>
 
+  <!-- Search Input, Search Button, Search History -->
   <div class = "row">
     <section id = "search-section">
       <div class = "row">
@@ -54,13 +56,41 @@
       <div class = "row">
         <div class = "col-12">
           <form class = "input-group">
-            <input class="form-control" type="text" id="enterCity"
-            placeholder="Enter a city"><button type="button" id="searchBtn"
+            <input class="form-control" type="text" id="citySearch"
+            placeholder="Enter a city"><button type="button" id="searchButton"
             class="btn btn-primary">Search</button>
           </form>
         </div>
       </div>
     </section>
+
+    <!-- Search History -->
+    <div class = "row">
+      <section class = "col-12 mt-3">  
+        <ul class="list-group" id="recentSearches">
+          <!-- Append list of searched cities -->
+        </ul>
+      </section>
+    </div>   
+
+    <div id="currentWeatherDetails" class="col-9">
+      <div class="row">
+        <div id="cityInformation" class="col-12">
+
+        </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-12">
+        <h3>5-Day Forecast:</h3>
+      </div>
+    </div>
+
+    <div id="forecastInformation" class="row pl-2">
+
+    </div>
+
   </div>
   
 
