@@ -41,3 +41,13 @@ h3 {
     padding-left: 1.5rem;
   }
 
+
+#currentWeatherDetails {
+    /* Initially hidden */
+    display: none; 
+}
+
+#currentWeatherDetails.show {
+    /* Visible when the show class is added */
+    display: block; 
+}

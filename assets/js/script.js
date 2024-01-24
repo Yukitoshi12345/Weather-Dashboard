@@ -23,8 +23,9 @@ function weatherToday(city) {
 
             // Clearing any previous content in the city information container
             $("#cityInformation").empty();
-            // Show the weather details container
-            $("#currentWeatherDetails").css("display", "block");
+           
+            // Display current weather details
+            $("#currentWeatherDetails").addClass("show");
  
             // Extracting the weather icon code from the response
             var weatherIconID = data.weather[0].icon;
