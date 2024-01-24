@@ -13,6 +13,11 @@ function weatherToday(city) {
     fetch(weatherTodayURL)
         .then(response => response.json())  //Parsing the response as JSON 
         .then(data => {
+            if (!data.name) {
+                // City doesn't exist, show alert and exit
+                alert("We couldn't find that city. Please try entering a valid city name.");
+                return;
+              }
             // Logging on console
             console.log(data);
 
@@ -51,7 +56,7 @@ function weatherToday(city) {
         // Display error message to the user otherwise
         .catch(error => {
             console.error('Failed to fetch current weather data: ', error);
-            alert("We couldn't find that city. Please try entering a valid city name");
+            alert("We were unable to display the current weather right now.");
         });
 }
 
@@ -116,7 +121,7 @@ function forecast5Days(latitude,longitude) {
         // Display error message to the user otherwise
         .catch(error => {
             console.error('Failed to fetch forecast data ', error);
-            alert("We couldn't find that city. Please try entering a valid city name");
+            alert("We were unable to display the forecast right now.");
         });
 }
 
@@ -135,45 +140,52 @@ searchHistoryList = JSON.parse(savedHistory) || [];
 // Display the saved history initially
 displaySearchHistory();
 
+
 // Event listener for search button
 $("#searchButton").on("click", event => {
-  event.preventDefault();
+    event.preventDefault();
 
-  var city = $("#citySearch").val();
-  weatherToday(city); // Assuming you have a function to fetch weather
+    var city = $("#citySearch").val();
+    weatherToday(city); // Assuming you have a function to fetch weather
 
-  if (!searchHistoryList.includes(city)) {
+    if (!searchHistoryList.includes(city)) {
     // Add the new city to the history list
     searchHistoryList.unshift(city); // Add to the beginning of the array
 
     // Keep the history list limited to 10 entries
     if (searchHistoryList.length > 10) {
-      searchHistoryList.pop(); // Remove the last entry (oldest)
+        searchHistoryList.pop(); // Remove the last entry (oldest)
     }
 
     // Update the UI to reflect the changes
     displaySearchHistory();
-  }
+    }
 
-  // Persist searched cities in localStorage
-  localStorage.setItem("city", JSON.stringify(searchHistoryList));
+    // Persist searched cities in localStorage
+    localStorage.setItem("city", JSON.stringify(searchHistoryList));
+});
+
+// Event listener for clear history button
+$("#clearHistoryButton").on("click", () => {
+    searchHistoryList = []; // Clear the search history array
+    localStorage.removeItem("city"); // Remove the history from localStorage
+    displaySearchHistory(); // Update the UI to reflect the cleared list
 });
 
 // Event listener for Enter key press in search input
 $("#citySearch").on("keydown", event => {
-  if (event.keyCode === 13) {
+    if (event.keyCode === 13) {
     event.preventDefault();
-  }
+    }
 });
 
-// Function to display search history (reversed order)
+// Function to display search history 
 function displaySearchHistory() {
-  var historyList = $("#recentSearches");
-  historyList.empty();
+    var historyList = $("#recentSearches");
+    historyList.empty();
 
-  searchHistoryList.forEach(city => {
+    searchHistoryList.forEach(city => {
     var listItem = createHistoryListItem(city);
     historyList.append(listItem); // Append in normal order (reversed in data)
-  });
+    });
 }
-
