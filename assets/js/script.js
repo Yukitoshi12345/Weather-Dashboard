@@ -51,7 +51,7 @@ function weatherToday(city) {
         // Display error message to the user otherwise
         .catch(error => {
             console.error('Failed to fetch current weather data: ', error);
-            alert('We were unable to display the current weather right now.');
+            alert("We couldn't find that city. Please try entering a valid city name");
         });
 }
 
@@ -116,7 +116,7 @@ function forecast5Days(latitude,longitude) {
         // Display error message to the user otherwise
         .catch(error => {
             console.error('Failed to fetch forecast data ', error);
-            alert('We were unable to display the forecast right now.');
+            alert("We couldn't find that city. Please try entering a valid city name");
         });
 }
 
