@@ -15,7 +15,7 @@ Plan your day or dream about your next adventure with our weather dashboard, off
 ## User Story
 
 ```md
-AS A traveler
+AS A traveller
 I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
 ```
