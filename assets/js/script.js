@@ -176,6 +176,9 @@ $("#clearHistoryButton").on("click", () => {
 $("#citySearch").on("keydown", event => {
     if (event.keyCode === 13) {
     event.preventDefault();
+    
+    // Reuse the same logic from the search button click
+    $("#searchButton").click();
     }
 });
 
