@@ -16,7 +16,7 @@ function weatherToday(city) {
             if (!data.name) {
                 // City doesn't exist, show alert and exit
                 alert("We couldn't find that city. Please try entering a valid city name.");
-                return;
+                return false;
               }
             // Logging on console
             console.log(data);
@@ -145,24 +145,28 @@ displaySearchHistory();
 // Event listener for search button
 $("#searchButton").on("click", event => {
     event.preventDefault();
-
+  
     var city = $("#citySearch").val();
+  
+    // Capitalize the first letter and make the rest lowercase
+    city = city.charAt(0).toUpperCase() + city.slice(1).toLowerCase();
+  
     weatherToday(city);
-
-    // Check for duplicates before adding to history
-    if (!searchHistoryList.includes(city)) {
-        searchHistoryList.unshift(city); // Add to the beginning
+  
+    // Check for duplicates and add to history with proper capitalisation
+    var normalisedCity = city.toLowerCase(); // Store a normalised version for comparison
+    if (!searchHistoryList.some(item => item.toLowerCase() === normalisedCity)) {
+      searchHistoryList.unshift(city); // Add to the beginning with capitalisation
         if (searchHistoryList.length > 10) {
-            searchHistoryList.pop(); // Remove the oldest if list is full
+        searchHistoryList.pop(); // Remove the oldest if list is full
         }
         localStorage.setItem("city", JSON.stringify(searchHistoryList));
         displaySearchHistory();
     } else {
-        // City already exists in history, no need to add
-        console.log("City already in history:", city);
+        console.log("City already in history (normalised):", normalisedCity);
     }
-
-    $("#citySearch").val("");
+  
+    $("#citySearch").val(""); // Clear the input field
 });
 
 // Event listener for clear history button
