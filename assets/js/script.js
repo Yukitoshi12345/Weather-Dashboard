@@ -147,26 +147,22 @@ $("#searchButton").on("click", event => {
     event.preventDefault();
 
     var city = $("#citySearch").val();
-    weatherToday(city); // Assuming you have a function to fetch weather
+    weatherToday(city);
 
+    // Check for duplicates before adding to history
     if (!searchHistoryList.includes(city)) {
-    // Add the new city to the history list
-    searchHistoryList.unshift(city); // Add to the beginning of the array
-
-    // Keep the history list limited to 10 entries
-    if (searchHistoryList.length > 10) {
-        searchHistoryList.pop(); // Remove the last entry (oldest)
+        searchHistoryList.unshift(city); // Add to the beginning
+        if (searchHistoryList.length > 10) {
+            searchHistoryList.pop(); // Remove the oldest if list is full
+        }
+        localStorage.setItem("city", JSON.stringify(searchHistoryList));
+        displaySearchHistory();
+    } else {
+        // City already exists in history, no need to add
+        console.log("City already in history:", city);
     }
 
-    // Clear the input field after fetching data
-    $("#citySearch").val(""); 
-    
-    // Update the UI to reflect the changes
-    displaySearchHistory();
-    }
-
-    // Persist searched cities in localStorage
-    localStorage.setItem("city", JSON.stringify(searchHistoryList));
+    $("#citySearch").val("");
 });
 
 // Event listener for clear history button
