@@ -158,6 +158,9 @@ $("#searchButton").on("click", event => {
         searchHistoryList.pop(); // Remove the last entry (oldest)
     }
 
+    // Clear the input field after fetching data
+    $("#citySearch").val(""); 
+    
     // Update the UI to reflect the changes
     displaySearchHistory();
     }
