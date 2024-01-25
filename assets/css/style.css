@@ -51,3 +51,7 @@ h3 {
     /* Visible when the show class is added */
     display: block; 
 }
+
+#recentSearches .list-group-item:hover {
+    cursor: pointer;
+}
