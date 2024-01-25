@@ -145,33 +145,28 @@ displaySearchHistory();
 // Event listener for search button
 $("#searchButton").on("click", event => {
     event.preventDefault();
-  
+
     var city = $("#citySearch").val();
-  
-    if (searchHistoryList.includes(city)) {
-      // City already exists in history, clear the input field after fetching data
-      $("#citySearch").val("");
-      // Reuse existing weather data or fetch again if needed
-      weatherToday(city); // Assuming you have a function to fetch weather
-    } else {
-      // City not in history, proceed as usual
-      weatherToday(city);
-  
-      // Add the new city to the history list, i.e. add to the beginning of the array
-      searchHistoryList.unshift(city); 
-  
-      // Keep the history list limited to 10 entries
-      if (searchHistoryList.length > 10) {
-        // Remove the last entry (oldest)
-        searchHistoryList.pop();
-      }
-  
-      // Update the UI to reflect the changes
-      displaySearchHistory();
-  
-      // Persist searched cities in localStorage
-      localStorage.setItem("city", JSON.stringify(searchHistoryList));
+    weatherToday(city); // Assuming you have a function to fetch weather
+
+    if (!searchHistoryList.includes(city)) {
+    // Add the new city to the history list
+    searchHistoryList.unshift(city); // Add to the beginning of the array
+
+    // Keep the history list limited to 10 entries
+    if (searchHistoryList.length > 10) {
+        searchHistoryList.pop(); // Remove the last entry (oldest)
     }
+
+    // Clear the input field after fetching data
+    $("#citySearch").val(""); 
+    
+    // Update the UI to reflect the changes
+    displaySearchHistory();
+    }
+
+    // Persist searched cities in localStorage
+    localStorage.setItem("city", JSON.stringify(searchHistoryList));
 });
 
 // Event listener for clear history button
@@ -181,25 +176,13 @@ $("#clearHistoryButton").on("click", () => {
     displaySearchHistory(); // Update the UI to reflect the cleared list
 });
 
-
 // Event listener for Enter key press in search input
 $("#citySearch").on("keydown", event => {
     if (event.keyCode === 13) {
-        event.preventDefault();
-
-        // Reuse the same logic from the search button click
-        var city = $("#citySearch").val();
-
-        // Clear the input field after fetching data for when the input matches with what is in the history search
-        if (searchHistoryList.includes(city)) {
-            // City already exists in history, clear input and reuse existing data
-            $("#citySearch").val("");
-            // Reuse existing weather data or fetch again if needed
-            weatherToday(city); // Optional: Fetch fresh data if desired
-        } else {
-            // City not in history, use search button logic
-            $("#searchButton").click();
-        }
+    event.preventDefault();
+    
+    // Reuse the same logic from the search button click
+    $("#searchButton").click();z
     }
 });
 
