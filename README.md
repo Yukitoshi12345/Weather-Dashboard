@@ -5,7 +5,7 @@ Plan your day or dream about your next adventure with our weather dashboard, off
 
 - [User Story](#user-story)
 - [Objectives](#objectives)
-- [Technologies And Tools Used](#technologies-and-tools-used)
+- [Technologies Used](#technologies-used)
 - [Screenshot](#screenshot)
 - [Output](#output)
 - [Installation](#installation)
@@ -26,7 +26,7 @@ SO THAT I can plan a trip accordingly
 - **Future Conditions**: Explore detailed weather info for the next 5 days, including dates, icons, temperature, wind speed, and humidity.
 - **Search history**: Click a city in the search history to revisit its current and future conditions.
 
-## Technologies and Tools Used
+## Technologies Used
 - HTML
 - CSS
 - JavaScript
