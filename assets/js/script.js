@@ -38,8 +38,8 @@ function weatherToday(city) {
                 <h3 id="weatherCityCurrent">
                 ${data.name} ` + dayjs().format(`DD/MM/YYYY`) + ` <img src="${weatherIconImageURL}" alt="${data.weather[0].description}" />
                 </h3>
-                <p>Temperature: ${data.main.temp} °C</p>
-                <p>Wind: ${data.wind.speed*3.6} km/hr</p>
+                <p>Temperature: ${data.main.temp.toFixed(1)} °C</p>
+                <p>Wind: ${(data.wind.speed*3.6).toFixed(1)} km/hr</p>
                 <p>Humidity: ${data.main.humidity}\%</p>
                 
             `);
@@ -108,8 +108,8 @@ function forecast5Days(latitude,longitude) {
                             <div class="card-body">
                                 <h5>${currentDate}</h5>
                                 <p>${IconForWeatherURL}</p>
-                                <p>Temperature: ${cityWeatherInformation.temperature} °C</p>
-                                <p> Wind: ${cityWeatherInformation.wind*3.6} km/hr</p>
+                                <p>Temperature: ${cityWeatherInformation.temperature.toFixed(1)} °C</p>
+                                <p> Wind: ${(cityWeatherInformation.wind*3.6).toFixed(1)} km/hr</p>
                                 <p>Humidity: ${cityWeatherInformation.humidity}\%</p>
                             </div>
                         </div>
@@ -182,7 +182,7 @@ $("#citySearch").on("keydown", event => {
     event.preventDefault();
     
     // Reuse the same logic from the search button click
-    $("#searchButton").click();z
+    $("#searchButton").click();
     }
 });
 
