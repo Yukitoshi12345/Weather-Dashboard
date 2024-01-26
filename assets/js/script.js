@@ -1,8 +1,11 @@
-// Generated apiKey from openweatherAPI.com after creating an account
-var baseURL = 'https://api.openweathermap.org';
-var metric = `units=metric`;
+// Generated apiKey from openweatherAPI.org after creating an account
 var apiWeatherKey = '24716f334fbb25fbc76f035aa23a8fa8';
 
+// Storing the base URL for openwatherAPI.org
+var baseURL = 'https://api.openweathermap.org';
+
+// Metric means temperature in celcius
+var metric = `units=metric`;
 
 // Function to fetch and display current weather for a given city
 function weatherToday(city) {
@@ -36,7 +39,7 @@ function weatherToday(city) {
             var weatherIconImageURL = `${baseURL}/img/w/${weatherIconID}.png`;
 
             // HTML content for city's current weather information
-            // toFixed(1) is a way of rounding to nearest 1 decimal place
+            // .toFixed(1) is a way of rounding to nearest 1 decimal place
             // wind speed is calculated in m/s, so to change to km/hr, multiply by 3.6
             var weatherCityCurrent = $(`
                 <h3 id="weatherCityCurrent">
