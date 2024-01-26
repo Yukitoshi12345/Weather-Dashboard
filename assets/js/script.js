@@ -125,6 +125,7 @@ function forecast5Days(latitude,longitude) {
                         </div>
                     <div>
                 `);
+                
                 // Appending the future weather to the forecast information container
                 $("#forecastInformation").append(upcomingForecastCard);
             };
