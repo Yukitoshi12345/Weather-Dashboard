@@ -7,6 +7,7 @@ var baseURL = 'https://api.openweathermap.org';
 // Metric means temperature in celcius
 var metric = `units=metric`;
 
+var searchHistoryList= [];
 // Function to fetch and display current weather for a given city
 function weatherToday(city) {
     // Calling an openWeatherMap API request on a variable
@@ -60,6 +61,11 @@ function weatherToday(city) {
             // Running the weather forecast function that has been created later down the javascript code
             forecast5Days(latitude, longitude);
 
+            // add comment
+            saveSearchedCity(data.name);
+
+            // add comment
+            displaySearchHistory();
         })
         // Display error message to the user otherwise
         .catch(error => {
@@ -112,18 +118,17 @@ function forecast5Days(latitude,longitude) {
 
         
                 // Create the HTML structure for the forecast card
-                var upcomingForecastCard = $(`
-                    <div class="pl-3">
-                        <div class="card pl-3 pt-3 mb-3 bg" style="width: 15rem;>
-                            <div class="card-body">
-                                <h5>${currentDate}</h5>
-                                <p>${IconForWeatherURL}</p>
-                                <p>Temperature: ${cityWeatherInformation.temperature.toFixed(1)} °C</p>
-                                <p> Wind: ${(cityWeatherInformation.wind*3.6).toFixed(1)} km/hr</p>
-                                <p>Humidity: ${cityWeatherInformation.humidity}\%</p>
-                            </div>
+                var upcomingForecastCard = $(` 
+                    <div class="card pl-3 pt-3 mb-3 bg" style= "width: 15rem";>
+                        <div class="card-body">
+                            <h5>${currentDate}</h5>
+                            <p>${IconForWeatherURL}</p>
+                            <p>Temperature: ${cityWeatherInformation.temperature.toFixed(1)} °C</p>
+                            <p> Wind: ${(cityWeatherInformation.wind*3.6).toFixed(1)} km/hr</p>
+                            <p>Humidity: ${cityWeatherInformation.humidity}\%</p>
                         </div>
-                    <div>
+                    </div>
+    
                 `);
 
                 // Appending the future weather to the forecast information container
@@ -158,14 +163,28 @@ function createHistoryListItem(city) {
     return listItem;
 }
 
-// Retrieve saved search history from localStorage on page load
-var savedHistory = localStorage.getItem("city");
-// Attempt to parse saved search history from localStorage, or create an empty array if none exists
-searchHistoryList = JSON.parse(savedHistory) || [];
 
-// Display the saved history initially
-displaySearchHistory();
+function saveSearchedCity(city){
+    if (!searchHistoryList.some(item => item === city)) {
+        // if (!searchHistoryList.some(item => item.toLowerCase() === normalisedCity)) {
+        // Add to the beginning with capitalisation
+        searchHistoryList.unshift(city); 
 
+        if (searchHistoryList.length > 10) {
+            // Remove the oldest entry if the list exceeds 10
+            searchHistoryList.pop(); 
+        }
+        // Save the updated history to localStorage
+        localStorage.setItem("city", JSON.stringify(searchHistoryList));
+
+        // Update the UI to reflect the new history
+        displaySearchHistory();
+
+    } else {
+        // Log a message if the city is already in the history (case-insensitive)
+        console.log("City already in history (normalised):", city);
+    }
+}
 
 // Event listener for the search button
 $("#searchButton").on("click", event => {
@@ -183,26 +202,11 @@ $("#searchButton").on("click", event => {
   
     // Check for duplicates and add to history with proper capitalisation
     // Store a normalised version for comparison
-    var normalisedCity = city.toLowerCase(); 
-
-    if (!searchHistoryList.some(item => item.toLowerCase() === normalisedCity)) {
-        // Add to the beginning with capitalisation
-        searchHistoryList.unshift(city); 
-
-        if (searchHistoryList.length > 10) {
-            // Remove the oldest entry if the list exceeds 10
-            searchHistoryList.pop(); 
-        }
-        // Save the updated history to localStorage
-        localStorage.setItem("city", JSON.stringify(searchHistoryList));
-
-        // Update the UI to reflect the new history
-        displaySearchHistory();
-
-    } else {
-        // Log a message if the city is already in the history (case-insensitive)
-        console.log("City already in history (normalised):", normalisedCity);
-    }
+    // var normalisedCity = city.toLowerCase(); 
+    // saveSearchedCity(normalisedCity);
+    // saveSearchedCity(city);
+    // displaySearchHistory();
+   
 
     // Clear the search input field after search
     $("#citySearch").val(""); 
@@ -238,6 +242,7 @@ function displaySearchHistory() {
     // Clear any existing content
     historyList.empty();
 
+    console.log(`from display function ${searchHistoryList}`);
     // Iterate through the search history and create list items for each city
     searchHistoryList.forEach(city => {
         // Create a list item for the city using the `createHistoryListItem` function
@@ -245,4 +250,14 @@ function displaySearchHistory() {
         // Append list items in normal order (reversed in data)
         historyList.append(listItem); 
     });
+
 }
+
+    // Retrieve saved search history from localStorage on page load
+    var savedHistory = localStorage.getItem("city");
+    // Attempt to parse saved search history from localStorage, or create an empty array if none exists
+    searchHistoryList = JSON.parse(savedHistory);
+
+    // Display the saved history initially
+    displaySearchHistory();
+
