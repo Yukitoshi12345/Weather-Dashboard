@@ -36,7 +36,11 @@ SO THAT I can plan a trip accordingly
 
 ## Screenshot
 
+Coming Soon
+
 ## Output
+
+Coming Soon
 
 ## Installation
 The project was uploaded to [GitHub](https://github.com/) at the following repository:
