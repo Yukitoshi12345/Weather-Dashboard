@@ -8,6 +8,7 @@ var baseURL = 'https://api.openweathermap.org';
 var metric = `units=metric`;
 
 var searchHistoryList= [];
+
 // Function to fetch and display current weather for a given city
 function weatherToday(city) {
     // Calling an openWeatherMap API request on a variable
