@@ -30,7 +30,8 @@ SO THAT I can plan a trip accordingly
 - HTML
 - CSS
 - JavaScript
-- Bootstrap
+- Bootstrap 
+- jQuery
 - Day.js
 
 ## Screenshot
