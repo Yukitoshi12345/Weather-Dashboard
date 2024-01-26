@@ -61,10 +61,10 @@ function weatherToday(city) {
             // Running the weather forecast function that has been created later down the javascript code
             forecast5Days(latitude, longitude);
 
-            // add comment
+            // add code
             saveSearchedCity(data.name);
 
-            // add comment
+            // add code
             displaySearchHistory();
         })
         // Display error message to the user otherwise
