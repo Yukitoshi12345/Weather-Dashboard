@@ -170,8 +170,8 @@ function saveSearchedCity(city){
         // Add to the beginning with capitalisation
         searchHistoryList.unshift(city); 
 
-        if (searchHistoryList.length > 5) {
-            // Remove the oldest entry if the list exceeds 10
+        if (searchHistoryList.length > 15) {
+            // Remove the oldest entry if the list exceeds 15
             searchHistoryList.pop(); 
         }
         // Save the updated history to localStorage
@@ -256,10 +256,10 @@ function displaySearchHistory() {
     // Retrieve saved search history from localStorage on page load
     var savedHistory = localStorage.getItem("city");
     // Attempt to parse saved search history from localStorage, or create an empty array if none exists
-    if(savedHistory){
+    if (savedHistory) {
         searchHistoryList = JSON.parse(savedHistory);
-    }else{
-        searchHistoryList =[];
+    } else {
+        searchHistoryList = [];
     }
     
 
