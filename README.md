@@ -21,6 +21,8 @@ SO THAT I can plan a trip accordingly
 ```
 
 ## Objectives
+The following criteria has to be met:
+
 - Enter a city and instantly see current and future conditions.
 - View city name, date, weather icon, temperature, humidity, and wind speed.
 - Explore detailed weather info for the next 5 days, including dates, icons, temperature, wind speed, and humidity.
