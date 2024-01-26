@@ -2,7 +2,7 @@
  Global rules and element rules
 ==================================== */
 
-header {
+.container-fluid {
     background-color: #4598f7;
     height: 100px;
 }
@@ -55,3 +55,14 @@ h3 {
 #recentSearches .list-group-item:hover {
     cursor: pointer;
 }
+
+#clearHistoryButton {
+    margin-top: 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+
+}
+

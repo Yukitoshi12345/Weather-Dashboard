@@ -125,7 +125,7 @@ function forecast5Days(latitude,longitude) {
                         </div>
                     <div>
                 `);
-                
+
                 // Appending the future weather to the forecast information container
                 $("#forecastInformation").append(upcomingForecastCard);
             };
@@ -146,7 +146,7 @@ function createHistoryListItem(city) {
     var listItem = document.createElement('li');
     
     // Add CSS classes to style the list item
-    listItem.classList.add('list-group-item', 'city-item');
+    listItem.classList.add('text-center', 'list-group-item', 'city-item');
 
     // Set the text content of the list item to the city name
     listItem.textContent = city;
