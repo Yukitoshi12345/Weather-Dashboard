@@ -4,7 +4,7 @@ Plan your day or dream about your next adventure with our weather dashboard, off
 ## Table of Contents
 
 - [User Story](#user-story)
-- [Objectives](#objectives)
+- [Acceptance Criteria](#acceptance-criteria)
 - [Technologies Used](#technologies-used)
 - [Screenshot](#screenshot)
 - [Output](#output)
@@ -20,13 +20,18 @@ I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
 ```
 
-## Objectives
-The following criteria has to be met:
-
-- Enter a city and instantly see current and future conditions.
-- View city name, date, weather icon, temperature, humidity, and wind speed.
-- Explore detailed weather info for the next 5 days, including dates, icons, temperature, wind speed, and humidity.
-- Click a city in the search history to revisit its current and future conditions.
+## Acceptance Criteria
+```
+GIVEN a weather dashboard with form inputs
+WHEN I search for a city
+THEN I am presented with current and future conditions for that city and that city is added to the search history
+WHEN I view current weather conditions for that city
+THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the wind speed
+WHEN I view future weather conditions for that city
+THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
+WHEN I click on a city in the search history
+THEN I am again presented with current and future conditions for that city
+```
 
 ## Technologies Used
 - HTML
