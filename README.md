@@ -1,4 +1,4 @@
-# <h1 align = "center"> Weather Dashboard </h1>
+<h1 align = "center"> Weather Dashboard </h1>
 Imagine planning your trip with the world's weather at your fingertips. This weather dashboard caters to the wanderlust in you, letting you effortlessly search for multiple cities and view their current and future conditions. Simply type in a city name, and presto! The current date, a weather icon, temperature, humidity, and wind speed appear, instantly painting a picture of the city's climate. Curious about the coming days? No problem! A 5-day forecast awaits, detailing the weather with icons, temperatures, wind speeds, and humidity levels. And to revisit past searches, a click on a city in the history brings back its complete weather picture. It's a world of weather information, all in one organised dashboard, empowering you to plan your trip with confidence and ease.
 
 ## Table of Contents
