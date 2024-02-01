@@ -1,5 +1,5 @@
 # <h1 align = "center"> Weather Dashboard </h1>
-Plan your day or dream about your next adventure with our weather dashboard, offering instant city searches, detailed current conditions, and a 5-day forecast, all just a click away!
+Imagine planning your trip with the world's weather at your fingertips. This weather dashboard caters to the wanderlust in you, letting you effortlessly search for multiple cities and view their current and future conditions. Simply type in a city name, and presto! The current date, a weather icon, temperature, humidity, and wind speed appear, instantly painting a picture of the city's climate. Curious about the coming days? No problem! A 5-day forecast awaits, detailing the weather with icons, temperatures, wind speeds, and humidity levels. And to revisit past searches, a click on a city in the history brings back its complete weather picture. It's a world of weather information, all in one organised dashboard, empowering you to plan your trip with confidence and ease.
 
 ## Table of Contents
 
@@ -46,7 +46,7 @@ THEN I am again presented with current and future conditions for that city
 [Coming Soon]
 
 ## Output
-Imagine planning your trip with the world's weather at your fingertips. This weather dashboard caters to the wanderlust in you, letting you effortlessly search for multiple cities and view their current and future conditions. Simply type in a city name, and presto! The current date, a weather icon, temperature, humidity, and wind speed appear, instantly painting a picture of the city's climate. Curious about the coming days? No problem! A 5-day forecast awaits, detailing the weather with icons, temperatures, wind speeds, and humidity levels. And to revisit past searches, a click on a city in the history brings back its complete weather picture. It's a world of weather information, all in one organised dashboard, empowering you to plan your trip with confidence and ease.
+The Weather Dashboard functions as a user-friendly interface, presenting weather information for a chosen city. Upon searching for a city, the dashboard displays both current and upcoming weather conditions, while also adding the city to a search history for quick revisit. Viewing current conditions reveals details like city name, date, weather icon, temperature, humidity, and wind speed. Similarly, the future forecast section provides a 5-day outlook with the same set of details. Clicking a city in the search history recalls its current and future weather information. Finally, a dedicated button clears the entire search history for a fresh start. 
 
 ## Installation
 The project was uploaded to [GitHub](https://github.com/) at the following repository:
