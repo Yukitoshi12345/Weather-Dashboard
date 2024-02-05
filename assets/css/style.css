@@ -2,11 +2,7 @@
  Global rules and element rules
 ==================================== */
 
-.container-fluid {
-    background-color: #4598f7;
-    height: 100px;
-}
-
+/* Heading styles */
 h1 {
     text-align: center; 
     margin-bottom: 1.5rem; 
@@ -27,34 +23,16 @@ h3 {
     color: black;
 }
 
+/* Header container styling */
+.container-fluid {
+    background-color: #4598f7;
+    height: 100px;
+}
 
+/* Button styling */
 .btn {
     margin-top: 15px;
     width: 100%;
-}
-
-#search-section {
-    width: 25%; 
-    background-color: #f8f9fa; 
-    padding-top: 1rem; 
-    padding-bottom: 0.5rem;
-    padding-left: 1.5rem;
-  }
-
-
-#show-and-hide {
-    /* Initially hidden */
-    display: none; 
-    
-}
-
-#show-and-hide.show {
-    /* Visible when the show class is added */
-    display: block; 
-}
-
-#recentSearches .list-group-item:hover {
-    cursor: pointer;
 }
 
 #searchButton {
@@ -74,12 +52,38 @@ h3 {
     border-radius: 5px;
 }
 
+/* Search section styling */
+#search-section {
+    width: 25%; 
+    background-color: #f8f9fa; 
+    padding-top: 1rem; 
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+  }
+
+/* Initially hidden element styling */
+#show-and-hide {
+    /* Initially hidden */
+    display: none;    
+}
+
+/* Visible element styling (when "show" class is applied) */
+#show-and-hide.show {
+    /* Visible when the show class is added */
+    display: block; 
+}
+
+/* Hover effect for search history items */
+#recentSearches .list-group-item:hover {
+    cursor: pointer;
+}
+
+/* Forecast card styling */
 .forecastCard {
     width: 14rem;
 }
 
-
-/* Media Queries for responsiveness */
+/* Media Queries for smaller screens */
 @media (max-width: 768px) {
     #search-section,
     #show-and-hide {
