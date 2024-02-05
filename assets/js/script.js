@@ -7,6 +7,8 @@ var baseURL = 'https://api.openweathermap.org';
 // Metric means temperature in celcius
 var metric = `units=metric`;
 
+
+// Declare an empty array to store search history items
 var searchHistoryList= [];
 
 // Function to fetch and display current weather for a given city
@@ -52,6 +54,7 @@ function weatherToday(city) {
                 <p>Humidity: ${data.main.humidity}\%</p>
                 
             `);
+            
             // Appending the current city weather to the city information container 
             $("#cityInformation").append(weatherCityCurrent);
 
@@ -62,10 +65,10 @@ function weatherToday(city) {
             // Running the weather forecast function that has been created later down the javascript code
             forecast5Days(latitude, longitude);
 
-            // add code
+            // Running the save searched city function that has been created later down the javascript code
             saveSearchedCity(data.name);
 
-            // add code
+            // Display the search history
             displaySearchHistory();
         })
         // Display error message to the user otherwise
@@ -116,7 +119,6 @@ function forecast5Days(latitude,longitude) {
 
                 // Formatting the date for the display
                 var currentDate = dayjs(cityWeatherInformation.date).format('DD/MM/YYYY');
-
         
                 // Create the HTML structure for the forecast card
                 var upcomingForecastCard = $(` 
@@ -129,14 +131,12 @@ function forecast5Days(latitude,longitude) {
                             <p>Humidity: ${cityWeatherInformation.humidity}\%</p>
                         </div>
                     </div>
-    
                 `);
 
                 // Appending the future weather to the forecast information container
                 $("#forecastInformation").append(upcomingForecastCard);
             };
         })
-
 
         // Display error message to the user otherwise
         .catch(error => {
@@ -235,7 +235,9 @@ function displaySearchHistory() {
     // Clear any existing content
     historyList.empty();
 
+    // Log a message
     console.log(`from display function ${searchHistoryList}`);
+
     // Iterate through the search history and create list items for each city
     searchHistoryList.forEach(city => {
         // Create a list item for the city using the `createHistoryListItem` function
@@ -255,7 +257,6 @@ function displaySearchHistory() {
         searchHistoryList = [];
     }
     
-
     // Display the saved history initially
     displaySearchHistory();
 
