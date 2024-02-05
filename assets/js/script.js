@@ -120,7 +120,7 @@ function forecast5Days(latitude,longitude) {
         
                 // Create the HTML structure for the forecast card
                 var upcomingForecastCard = $(` 
-                    <div class="card pl-3 bg" style= "width: 16rem";>
+                    <div class="card pl-3 bg" style= "width: 25rem";>
                         <div class="card-body">
                             <h5>${currentDate}</h5>
                             <p>${IconForWeatherURL}</p>
