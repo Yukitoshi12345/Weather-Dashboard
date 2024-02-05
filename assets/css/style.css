@@ -78,6 +78,8 @@ h3 {
     width: 14rem;
 }
 
+
+/* Media Queries for responsiveness */
 @media (max-width: 768px) {
     #search-section,
     #show-and-hide {
