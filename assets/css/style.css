@@ -42,13 +42,13 @@ h3 {
   }
 
 
-#currentWeatherDetails {
+#show-and-hide {
     /* Initially hidden */
     display: none; 
     
 }
 
-#currentWeatherDetails.show {
+#show-and-hide.show {
     /* Visible when the show class is added */
     display: block; 
 }
@@ -74,3 +74,10 @@ h3 {
     border-radius: 5px;
 
 }
+
+@media (max-width: 768px) {
+    #search-section,
+    #show-and-hide {
+      width: 100%;
+    }
+  }

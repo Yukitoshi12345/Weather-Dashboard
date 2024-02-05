@@ -31,8 +31,8 @@ function weatherToday(city) {
             // Clearing any previous content in the city information container
             $("#cityInformation").empty();
            
-            // Display current weather details
-            $("#currentWeatherDetails").addClass("show");
+            // Display all weather details
+            $("#show-and-hide").addClass("show");
  
             // Extracting the weather icon code from the response
             var weatherIconID = data.weather[0].icon;
@@ -200,14 +200,6 @@ $("#searchButton").on("click", event => {
   
     // Fetch and display weather for the entered city
     weatherToday(city);
-  
-    // Check for duplicates and add to history with proper capitalisation
-    // Store a normalised version for comparison
-    // var normalisedCity = city.toLowerCase(); 
-    // saveSearchedCity(normalisedCity);
-    // saveSearchedCity(city);
-    // displaySearchHistory();
-   
 
     // Clear the search input field after search
     $("#citySearch").val(""); 

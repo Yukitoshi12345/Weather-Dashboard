@@ -30,36 +30,33 @@
 
 <body>
   <!-- Title and the Navigation Bar -->
-  <div class = "container-fluid">
-    <div class = "col-12 text-center">
+  <div class="container-fluid">
+    <div class="col-12 text-center">
       <h1>Weather Dashboard</h1>
     </div>
-  
 
     <!-- Search Input, Search Button, Search History -->
-    <div class = "row">
-      <div class="col-3 bg-light pb-2 pt-3" id = "search-section">
-        <div class = "row">
-          <div class = "col-12">
-            <h2 class = "mb-3 text-center"><u>Search for a City</u></h2>
+    <div class="row">
+      <div class="col-12 pb-2 pt-3" id="search-section">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="mb-3 text-center"><u>Search for a City</u></h2>
           </div>
         </div>
 
-        <div class = "row">
-          <div class = "col-12 mt-3">
-            <form class = "input-group">
-              <input class="form-control" type="text" id="citySearch"
-              placeholder="Enter a city">
+        <div class="row">
+          <div class="col-12 mt-3">
+            <form class="input-group">
+              <input class="form-control" type="text" id="citySearch" placeholder="Enter a city">
               <button type="button" id="searchButton" class="btn btn-primary">Search</button>
             </form>
             <button type="button" id="clearHistoryButton" class="btn btn-primary">Clear History</button>
           </div>
         </div>
-      
 
         <!-- Recent Searches Section -->
-        <div class = "row mt-3">
-          <section class = "col-12">  
+        <div class="row mt-3">
+          <section class="col-12">  
             <ul class="list-group" id="recentSearches">
               <!-- Append list of searched cities -->
             </ul>
@@ -67,30 +64,34 @@
         </div>   
       </div>
 
-
-      <div id="currentWeatherDetails" class="col-9 pb-4 pt-4">
-        <div class="row pb-3 mr-2 ml-2 border ms-2 me-2 mb-4">
-          <div id="cityInformation" class="col-12 border-dark rounded px-3 py-3">
-
-          </div>
-        </div>
-
-
+      <div id="show-and-hide" class="col-12 col-md-9 pb-4 pt-4">
         <div class="row pb-2 pt-1">
           <div class="col-12 ml-2 text-center">
-            <h3> <u>5-Day Forecast</u></h3>
+            <h3><u>Current Weather</u></h3>
           </div>
         </div>
 
-        <div id="forecastInformation" class="row pl-2 justify-content-center">
-          <!-- cards -->
+        <div id="currentWeatherDetails">
+          <div class="row pb-3 mr-2 ml-2 border ms-2 me-2 mb-4">
+            <div id="cityInformation" class="col-12 px-3 py-3">
+
+            </div>
+          </div>
+
+          <div class="row pb-2 pt-1">
+            <div class="col-12 ml-2 text-center">
+              <h3><u>5-Day Forecast</u></h3>
+            </div>
+          </div>
+
+          <div id="forecastInformation" class="row pl-2 justify-content-center">
+            <!-- cards -->
+          </div>
         </div>
-        
       </div>
     </div>
   </div>
 
-  
 
 
   
