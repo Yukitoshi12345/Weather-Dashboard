@@ -45,7 +45,7 @@ THEN I am again presented with current and future conditions for that city
 
 ## Screenshot
 
-[Coming Soon]
+![](./assets/images/screenshot.png)
 
 ## Output
 The Weather Dashboard functions as a user-friendly interface, presenting weather information for a chosen city. Upon searching for a city, the dashboard displays both current and upcoming weather conditions, while also adding the city to a search history for quick revisit. Viewing current conditions reveals details like city name, date, weather icon, temperature, humidity, and wind speed. Similarly, the future forecast section provides a 5-day outlook with the same set of details. Clicking a city in the search history recalls its current and future weather information. Finally, a dedicated button clears the entire search history for a fresh start. 
