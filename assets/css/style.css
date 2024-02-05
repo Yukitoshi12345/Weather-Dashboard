@@ -91,4 +91,10 @@ h3 {
     }
 }
 
+@media (max-width: 448px) {
+    .forecastCard {
+        /* width: 200%; */
+        margin-inline: 1rem;
+    }
+}
 
