@@ -120,7 +120,7 @@ function forecast5Days(latitude,longitude) {
         
                 // Create the HTML structure for the forecast card
                 var upcomingForecastCard = $(` 
-                    <div class="card pl-3 pt-3 mb-3 bg" style= "width: 14rem";>
+                    <div class="card pl-3 bg" style= "width: 14rem";>
                         <div class="card-body">
                             <h5>${currentDate}</h5>
                             <p>${IconForWeatherURL}</p>
@@ -152,7 +152,7 @@ function createHistoryListItem(city) {
     var listItem = document.createElement('li');
     
     // Add CSS classes to style the list item
-    listItem.classList.add('text-center', 'list-group-item', 'city-item');
+    listItem.classList.add('text-center', 'list-group-item', 'city-item', 'text-truncate');
 
     // Set the text content of the list item to the city name
     listItem.textContent = city;
