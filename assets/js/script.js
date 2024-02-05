@@ -171,8 +171,8 @@ function saveSearchedCity(city){
         // Add to the beginning with capitalisation
         searchHistoryList.unshift(city); 
 
-        if (searchHistoryList.length > 13) {
-            // Remove the oldest entry if the list exceeds 13
+        if (searchHistoryList.length > 10) {
+            // Remove the oldest entry if the list exceeds 10
             searchHistoryList.pop(); 
         }
         // Save the updated history to localStorage
