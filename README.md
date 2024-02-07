@@ -12,6 +12,7 @@ Imagine planning your trip with the world's weather at your fingertips. This wea
 - [Video](#video)
 - [Output](#output)
 - [Installation](#installation)
+- [Central Grader Comments](#central-grader-comments)
 - [License](#license)
 
 
@@ -60,6 +61,21 @@ The project was uploaded to [GitHub](https://github.com/) at the following repos
 
 You can access the deployed application with the GitHub Pages link:
 [https://yukitoshi12345.github.io/Weather-Dashboard/](https://yukitoshi12345.github.io/Weather-Dashboard/)
+
+## Central Grader Comments
+Grade: 100/100
+
+Congratulations on completing this challenge, Yukitoshi! You've truly outdone yourself with this weather dashboard. Creating a fully functional application without errors is a remarkable feat, demonstrating your strong understanding of the concepts and meticulous attention to detail.
+
+This submission goes above and beyond expectations. Both links lead directly to the correct pages, and the repository and deployed site are readily accessible, providing a solid foundation for your project.
+
+The user interface is clean and user-friendly, making for a positive experience. The search feature flawlessly retrieves and displays accurate weather data, generates buttons in the search history for easy access, and even seamlessly reruns the search. Additionally, the 5-day forecast renders perfectly, highlighting your grasp of the required functionality.
+
+The impressive number of commits and exceptionally well-written README speak volumes about your diligence and commitment to documentation. The inclusion of comprehensive documentation, a screenshot, and a link to the deployed application further elevates the quality of your repository.
+
+Finally, the look and feel of your site closely matches the demo, achieving both functionality and aesthetics. This showcases your keen eye for detail and dedication to user experience.
+
+Overall, this submission surpasses expectations and showcases an exceptional level of achievement. Your dedication to quality and attention to detail are truly commendable. Keep up the excellent work!
 
 ## License
 This project is licensed under the [MIT License](https://github.com/Yukitoshi12345/Weather-Dashboard/blob/main/LICENSE).
