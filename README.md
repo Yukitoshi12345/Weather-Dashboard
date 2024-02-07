@@ -77,5 +77,7 @@ Finally, the look and feel of your site closely matches the demo, achieving both
 
 Overall, this submission surpasses expectations and showcases an exceptional level of achievement. Your dedication to quality and attention to detail are truly commendable. Keep up the excellent work!
 
+- SG, Centralized Grading.
+
 ## License
 This project is licensed under the [MIT License](https://github.com/Yukitoshi12345/Weather-Dashboard/blob/main/LICENSE).
