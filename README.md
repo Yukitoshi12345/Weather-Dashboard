@@ -50,9 +50,13 @@ THEN I am again presented with current and future conditions for that city
 
 ![](./assets/images/screenshot.png)
 
+<br>
+
 ## Video
 
 ![](./assets/videos/screenrecord.gif)
+
+<br>
 
 ## Output
 
